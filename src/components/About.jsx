@@ -84,7 +84,7 @@ export default function About() {
                     style={{ border: '2px solid rgba(0,212,255,0.4)', boxShadow: '0 0 40px rgba(0,212,255,0.2)' }}
                   >
                     <img
-                      src={about.profilePhoto || '/profile.png'}
+                      src={about.profilePhoto || `${import.meta.env.BASE_URL}profile.png`}
                       alt={about.name || 'Taha Elbasry'}
                       className="w-full h-full object-cover"
                       onError={e => {

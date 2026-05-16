@@ -52,7 +52,7 @@ export default function Hero() {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const photoSrc = about.profilePhoto || '/profile.png'
+  const photoSrc = about.profilePhoto || `${import.meta.env.BASE_URL}profile.png`
 
   return (
     <section
