@@ -61,7 +61,7 @@ export default function App() {
   return (
     <ThemeProvider>
     <DataProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           {/* ── Portfolio (public) ── */}
           <Route path="/" element={<Portfolio />} />
