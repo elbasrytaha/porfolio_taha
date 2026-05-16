@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 // Context
 import { DataProvider } from './context/DataContext'
@@ -61,7 +61,7 @@ export default function App() {
   return (
     <ThemeProvider>
     <DataProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Routes>
           {/* ── Portfolio (public) ── */}
           <Route path="/" element={<Portfolio />} />
@@ -86,7 +86,7 @@ export default function App() {
           {/* Catch-all */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </DataProvider>
     </ThemeProvider>
   )
